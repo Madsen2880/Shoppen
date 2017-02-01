@@ -5,7 +5,9 @@ if($_POST){
     $produktpris = $_POST['produktpris'];
 
     $conn = mysqli_connect('localhost', 'root', '', 'shop');
-    mysqli_query($conn, "");
+    mysqli_query($conn, "INSERT INTO `produkter` (produktnavn, produktinfo, produktpris) VALUES('$produktnavn','$produktinfo','$produktpris')");
+    mysqli_close($conn);
+
 
 }
 
