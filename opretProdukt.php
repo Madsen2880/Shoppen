@@ -12,8 +12,8 @@ if($_POST){
         if (empty($_POST['produktnavn'])){ // test om variablen er tom
             $fejlproduktnavn = 'Du skal udfylde feltet, klaphat';
             ++$fejl;
-        }else if ( preg_match('/\d/', $_POST['navn']) ) { // test om varibel indeholder tal
-            $fejlnavn = "DOH! Du ka' sgu' da ikke hedde noget med tal i. Spade.";
+        }else if (preg_match('/\d/', $_POST['produktnavn']) ) { // test om varibel indeholder tal
+            $fejlproduktnavn = "DOH! Du ka' sgu' da ikke hedde noget med tal i. Spade.";
             ++$fejl;
             } else {//success
                 $produktnavn = $_POST['produktnavn'];
